@@ -2,7 +2,7 @@
 
 CareerFlow is a modern job application tracking platform that helps users organize and manage their job search through a visual workflow. The application allows users to add, edit, delete, and track job opportunities as they move through different stages of the hiring process.
 
-The platform uses a drag-and-drop pipeline to manage job applications across stages such as Applied, Interview, Offer, and Rejected.
+The platform uses a pipeline to manage job applications across stages such as Applied, Interview, Offer, and Rejected.
 
 CareerFlow was built using React and Firebase to provide a fast, responsive interface with persistent cloud storage.
 
