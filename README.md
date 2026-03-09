@@ -1,16 +1,98 @@
-# React + Vite
+ # CareerFlow — Job Application Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+CareerFlow is a modern job application tracking platform that helps users organize and manage their job search through a visual workflow. The application allows users to add, edit, delete, and track job opportunities as they move through different stages of the hiring process.
 
-Currently, two official plugins are available:
+The platform uses a drag-and-drop pipeline to manage job applications across stages such as Applied, Interview, Offer, and Rejected.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+CareerFlow was built using React and Firebase to provide a fast, responsive interface with persistent cloud storage.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Project Rename
 
-## Expanding the ESLint configuration
+This project was originally developed under the working name **Job Application Tracker** during early development. As the design and feature set evolved, the project was renamed to **CareerFlow** to better represent its purpose of managing the flow of career opportunities through the hiring process.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Features
+
+### User Authentication
+Users can create an account or log in using Firebase Authentication. Logged-in users have their job applications securely saved to the cloud.
+
+### Add Job Applications
+Users can create new applications with the following information:
+
+- Company (required)
+- Role (required)
+- Location (optional)
+- Salary (optional)
+- Job link (optional)
+- Notes (optional)
+
+### Drag-and-Drop Application Pipeline
+Applications are displayed as cards that can be dragged between workflow stages:
+
+- Applied
+- Interview
+- Offer
+- Rejected
+
+This provides a visual way to manage the hiring process.
+
+### Edit Applications
+Users can update application details at any time through the edit panel.
+
+### Delete Applications
+Applications can be removed instantly and are also deleted from Firebase when logged in.
+
+### Persistent Storage
+When a user is logged in, applications are stored in **Firebase Firestore** and automatically reload when the user returns.
+
+If the user is not logged in, applications are stored temporarily and will disappear when the page refreshes.
+
+### Company Logo Detection
+CareerFlow automatically loads company logos using the Clearbit Logo API when a job link is provided.
+
+### Dashboard Statistics
+The dashboard provides quick statistics including:
+
+- Total applications
+- Interviews
+- Offers
+- Rejections
+
+This allows users to track their job search progress.
+
+---
+
+## Tech Stack
+
+Frontend
+- React
+- Vite
+- CSS (Glassmorphism UI design)
+
+Backend / Services
+- Firebase Authentication
+- Firebase Firestore Database
+
+Libraries
+- DnD Kit (Drag and Drop system)
+- Clearbit Logo API
+
+---
+
+## How It Works
+
+1. The user creates an account or logs in.
+2. The user adds job applications using the application form.
+3. Each job appears as a card in the workflow board.
+4. Cards can be dragged between stages to update application status.
+5. Users can edit or delete applications as needed.
+6. When logged in, all data is stored in Firebase Firestore.
+
+---
+
+## Installation
+
+Clone the repository
